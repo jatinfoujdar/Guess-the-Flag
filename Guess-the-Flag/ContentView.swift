@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Guess-the-Flag
-//
-//  Created by jatin foujdar on 04/10/24.
-//
-
 import SwiftUI
 struct ContentView: View {
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"].shuffled()
@@ -17,9 +10,11 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
-            LinearGradient(colors: [.blue , .black], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [.blue , .red], startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             VStack(spacing: 30){
+                Text("Guess the View")
+                    .font(.largeTitle.weight(.heavy))
                 VStack{
                     Text("Tap on the Flag")
                         .foregroundStyle(.white)
