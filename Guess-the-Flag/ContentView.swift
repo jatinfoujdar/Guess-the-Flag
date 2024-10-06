@@ -18,8 +18,7 @@ struct ContentView: View {
                 VStack{
                     Text("Tap on the Flag")
                         .foregroundStyle(.white)
-                        .font(.largeTitle.weight(.heavy))
-                    
+                        .font(.largeTitle.weight(.bold))
                     Text(countries[correctAnswer])
                         .foregroundStyle(.white)
                         .font(.largeTitle.weight(.semibold))
@@ -48,14 +47,16 @@ struct ContentView: View {
             score += 1
         }else{
             scoreTitle = "Wrong"
-    
+            score -= 1
         }
         showingScore = true
     }
     func askQuestion(){
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        
     }
+    
 }
 
 #Preview {
